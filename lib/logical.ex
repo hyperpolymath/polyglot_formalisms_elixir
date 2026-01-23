@@ -43,8 +43,8 @@ defmodule PolyglotFormalisms.Logical do
       iex> PolyglotFormalisms.Logical.and(false, false)
       false
   """
-  @spec and(boolean(), boolean()) :: boolean()
-  def and(a, b), do: a and b
+  @spec unquote(:and)(boolean(), boolean()) :: boolean()
+  def unquote(:and)(a, b), do: a and b
 
   @doc """
   Computes the logical disjunction (OR) of two boolean values.
@@ -83,8 +83,8 @@ defmodule PolyglotFormalisms.Logical do
       iex> PolyglotFormalisms.Logical.or(false, false)
       false
   """
-  @spec or(boolean(), boolean()) :: boolean()
-  def or(a, b), do: a or b
+  @spec unquote(:or)(boolean(), boolean()) :: boolean()
+  def unquote(:or)(a, b), do: a or b
 
   @doc """
   Computes the logical negation (NOT) of a boolean value.
@@ -115,6 +115,6 @@ defmodule PolyglotFormalisms.Logical do
       iex> PolyglotFormalisms.Logical.not(false)
       true
   """
-  @spec not(boolean()) :: boolean()
-  def not(a), do: Kernel.not(a)
+  @spec unquote(:not)(boolean()) :: boolean()
+  def unquote(:not)(a), do: Kernel.not(a)
 end
