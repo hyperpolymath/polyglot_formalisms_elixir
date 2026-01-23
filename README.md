@@ -24,9 +24,11 @@ This package provides Elixir implementations of fundamental operations defined i
 - `greater_equal(a, b)` - Greater than or equal
 
 ### Logical
-- `and(a, b)` - Logical conjunction
-- `or(a, b)` - Logical disjunction
-- `not(a)` - Logical negation
+- `logical_and(a, b)` - Logical conjunction
+- `logical_or(a, b)` - Logical disjunction
+- `logical_not(a)` - Logical negation
+
+**Note:** Function names include `logical_` prefix to avoid conflicts with Elixir's Kernel reserved keywords.
 
 ## Installation
 
@@ -54,9 +56,9 @@ is_less = Comparison.less_than(2.0, 3.0)
 is_equal = Comparison.equal(5.0, 5.0)
 
 # Logical
-both_true = Logical.and(true, true)
-either_true = Logical.or(false, true)
-negated = Logical.not(false)
+both_true = Logical.logical_and(true, true)
+either_true = Logical.logical_or(false, true)
+negated = Logical.logical_not(false)
 ```
 
 ## Mathematical Properties
